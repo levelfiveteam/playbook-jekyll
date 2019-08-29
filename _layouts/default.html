@@ -12,17 +12,15 @@ layout: table_wrappers
     <div class="side-bar">
       <div class="site-header">
         <a href="{{ site.url }}{{ site.baseurl }}" class="site-title lh-tight">{% include title.html %}</a>
-        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button"></button>
       </div>
 
-      <div class="navigation main-nav js-main-nav">
+      <div class="navigation main-nav js-main-nav" id="nav">
         {% include nav.html %}
       </div>
-      <footer class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-4">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll. This site was made by Atharva Joshi of Level 5 Inc.</p>
-      </footer>
+      <button class="menu-button fs-3 js-main-nav-trigger" id= "sidenav-toggle"data-text-toggle="Hide" type="button" onclick="openNav()"><i class="fa fa-bars" style="font-size:25px"></i></button>
+
     </div>
-    <div class="main-content-wrap js-main-content" tabindex="0">
+    <div class="main-content-wrap js-main-content" id="main" tabindex="0">
       <div class="main-content">
         <div class="page-header js-page-header">
           {% if site.search_enabled != false %}
